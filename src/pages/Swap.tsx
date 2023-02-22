@@ -32,20 +32,20 @@ const Swap = () => {
   );
 
   const inputOnchangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = +e.target.value;
+    const value: number | string = e.target.value;
     setinputNum(value);
-    setoutputNum((value * inputUSD) / outputUSD);
-    setTotalInputPrice(value * inputUSD);
-    setTotalOutputPrice(((value * inputUSD) / outputUSD) * outputUSD);
+    setoutputNum(((+value * inputUSD) / outputUSD).toFixed(10).toString());
+    setTotalInputPrice(+value * inputUSD);
+    setTotalOutputPrice(((+value * inputUSD) / outputUSD) * outputUSD);
     console.log(inputToken.id, inputUSD, outputToken.id, outputUSD);
   };
 
   const outputOnchangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = +e.target.value;
+    const value: number | string = e.target.value;
     setoutputNum(value);
-    setinputNum((value * outputUSD) / inputUSD);
-    setTotalOutputPrice(value * outputUSD);
-    setTotalInputPrice(((value * outputUSD) / inputUSD) * inputUSD);
+    setinputNum(((+value * outputUSD) / inputUSD).toFixed(10).toString());
+    setTotalOutputPrice(+value * outputUSD);
+    setTotalInputPrice(((+value * outputUSD) / inputUSD) * inputUSD);
     console.log(inputToken.id, inputUSD, outputToken.id, outputUSD);
   };
 

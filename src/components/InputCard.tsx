@@ -31,7 +31,7 @@ const InputCard = (props: InputCardProps) => {
           className={styles.priceInput}
           type="number"
           placeholder="0.0"
-          value={props.currentNum.toString() != "" ? props.currentNum : ""}
+          value={props.currentNum}
           onChange={props.onChange}
         ></input>
         <div
