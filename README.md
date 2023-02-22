@@ -1,13 +1,13 @@
 # uniswap-clone
 
 
-##dev
+## dev
 - npm install
 - npm run start
 
 
 
 
-##build
+## build
 - npm install
 - npm run build
