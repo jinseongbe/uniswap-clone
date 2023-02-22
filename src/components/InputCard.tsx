@@ -8,7 +8,7 @@ interface InputCardProps {
   tokenName: string;
   tokenLogo: string;
   usd: number;
-  currentNum: number;
+  currentNum: number | string;
   setToken: (tokenData: TokenData) => void;
   setNum: (price: number) => void;
   setOtherPrice: (price: number) => void;
@@ -31,11 +31,7 @@ const InputCard = (props: InputCardProps) => {
           className={styles.priceInput}
           type="number"
           placeholder="0.0"
-          value={
-            +props.currentNum
-              ? parseFloat(props.currentNum.toFixed(10)).toString()
-              : ""
-          }
+          value={props.currentNum.toString() != "" ? props.currentNum : ""}
           onChange={props.onChange}
         ></input>
         <div

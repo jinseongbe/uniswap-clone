@@ -77,7 +77,7 @@ const Swap = () => {
             tokenName={inputToken.tokenName}
             tokenLogo={inputToken.tokenLogo}
             usd={totalInputPrice}
-            currentNum={+inputNum}
+            currentNum={inputNum}
             setToken={setInputToken}
             setNum={setinputNum}
             setOtherPrice={setoutputNum}
@@ -88,7 +88,7 @@ const Swap = () => {
             tokenName={outputToken.tokenName}
             tokenLogo={outputToken.tokenLogo}
             usd={totalOutputPrice}
-            currentNum={+outputNum}
+            currentNum={outputNum}
             setToken={setOutputToken}
             setNum={setoutputNum}
             setOtherPrice={setinputNum}
