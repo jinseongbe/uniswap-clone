@@ -1,0 +1,71 @@
+.inputContainer {
+  background-color: rgb(19, 26, 42);
+  width: 82vw;
+  max-width: 370px;
+  height: 3.5rem;
+  padding: 6px 12px 6px 12px;
+  border-radius: 12px;
+  margin: 3px;
+}
+
+.priceContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceInput {
+  outline: none;
+  border: none;
+  height: 2rem;
+  width: 100%;
+  background-color: rgb(19, 26, 42);
+  color: white;
+  font-size: 1.4rem;
+}
+
+.tokenSelectBtn {
+  height: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(41, 50, 73);
+  opacity: 1;
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0 5px 0 5px;
+  gap: 7px;
+}
+.tokenSelectBtn:hover {
+  opacity: 0.6;
+}
+
+.tokenSymbol {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 10px;
+}
+.tokenName {
+  color: white;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.bottomArrow {
+  color: white;
+}
+
+.usdtPrice {
+  font-size: 0.8rem;
+  color: rgb(131, 131, 131);
+}

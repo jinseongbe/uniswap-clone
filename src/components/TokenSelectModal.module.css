@@ -1,0 +1,185 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  animation-name: fade-in;
+  animation-duration: 0.6s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.modalContainer {
+  z-index: 8;
+  position: fixed;
+  top: 300px;
+  margin-left: -10px;
+}
+
+.modalContainerTop {
+  position: relative;
+  top: -200px;
+  width: 350px;
+  height: 100%;
+  z-index: 10;
+  background: rgb(13, 17, 28);
+  border-radius: 16px 16px 0 0;
+  border: 1px solid rgb(27, 34, 54);
+  padding: 16px;
+}
+.modalContainerBottom {
+  composes: modalContainerTop;
+  position: relative;
+  height: 400px;
+  width: 382px;
+  padding: 0;
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topContaier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.title {
+  color: white;
+}
+.closeBtn {
+  cursor: pointer;
+}
+.closeBtn:hover {
+  opacity: 0.6;
+}
+
+.searchBar {
+  width: 340px;
+  height: 40px;
+  border: 1px solid rgb(37, 63, 110);
+  background: rgb(13, 17, 28);
+  border-radius: 12px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1rem;
+}
+.searchBar:focus {
+  outline: none !important;
+  border-color: rgb(66, 113, 201);
+  box-shadow: 0 0 10px rgb(66, 113, 201);
+}
+
+.recentList {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+.recentTokenContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 0.5px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 4px 10px 4px 10px;
+  height: 100%;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  gap: 5px;
+}
+.recentTokenContainer:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.recentTokenLogo {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 10px;
+}
+.recentTokenName {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.tokenList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 356px;
+  overflow: scroll;
+  padding: 0 16px 0 16px;
+}
+
+.tokenContainer {
+  z-index: 15;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 2rem;
+  padding: 8px 0 8px 0;
+  cursor: pointer;
+}
+.tokenContainer:hover {
+  background: rgba(255, 255, 255, 0.118);
+}
+
+.logo {
+  margin-left: 16px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 20px;
+}
+.tokenName {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.editListBtn {
+  position: relative;
+  width: 350px;
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: rgb(22, 29, 48);
+  margin: 0 -16px 0 -16px;
+  padding: 0 16px 0 16px;
+  gap: 6px;
+  border-radius: 0 0 16px 16px;
+}
+
+.txt {
+  color: rgb(66, 113, 201);
+  margin-bottom: 2px;
+}
